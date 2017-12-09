@@ -6,12 +6,11 @@ export default class ProfileInfoComponent extends PureComponent {
 
 	render() {
 		return (
-			<div style={{ backgroundColor: "red" }}>
+			<div>
 				<Header as="h2">
 					<Image
 						circular
-						size="tiny"
-						src="https://i.pinimg.com/564x/8e/d7/41/8ed7410285f101ba5892ff723c91fa75--life-is-beautiful-beautiful-eyes.jpg"
+						src="https://lh3.googleusercontent.com/dB3Dvgf3VIglusoGJAfpNUAANhTXW8K9mvIsiIPkhJUAbAKGKJcEMPTf0mkSexzLM5o=w300"
 					/>
 					{this.props.info.name}
 				</Header>
