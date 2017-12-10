@@ -19,8 +19,8 @@ export default class ProfileInfoComponent extends PureComponent {
 				<div>
 					<Image
 						circular
-						size="large"
-						style={{ padding: "10px", height: "180px", width: "220px" }}
+						size="small"
+						style={{ padding: "10px" }}
 						src="https://i.pinimg.com/736x/5e/ef/b0/5eefb0ba496d7eb426493260fbd63fc0--girl-models-pretty-face.jpg"
 					/>
 					<div
@@ -38,7 +38,8 @@ export default class ProfileInfoComponent extends PureComponent {
 						width: "100%",
 						display: "flex",
 						justifyContent: "center",
-						alignItems: "center"
+						alignItems: "center",
+						fontSize: "20px"
 					}}>
 					Welcome to SnapShop, {this.props.info.name}. To begin click on the figure below and select
 					the phenotype that interests you.
