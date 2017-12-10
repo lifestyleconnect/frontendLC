@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Dropdown, Icon, Menu, Input } from "semantic-ui-react";
+import { Dropdown, Image, Menu, Input } from "semantic-ui-react";
 
 export default class NavbarComponent extends PureComponent {
 	state = { activeItem: "home" };
@@ -9,8 +9,10 @@ export default class NavbarComponent extends PureComponent {
 	render() {
 		const { activeItem } = this.state;
 		return (
-			<Menu secondary>
-				<Menu.Item>LOGO</Menu.Item>
+			<Menu secondary style={{ width: "100%" }}>
+				<Menu.Item>
+					<Image src="/LOGOFINAL.png" alt="" size="mini" />
+				</Menu.Item>
 				<Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick} />
 				<Menu.Item
 					name="messages"
@@ -18,8 +20,8 @@ export default class NavbarComponent extends PureComponent {
 					onClick={this.handleItemClick}
 				/>
 				<Menu.Item
-					name="friends"
-					active={activeItem === "friends"}
+					name="discover"
+					active={activeItem === "discover"}
 					onClick={this.handleItemClick}
 				/>
 				<Menu.Menu position="right">
