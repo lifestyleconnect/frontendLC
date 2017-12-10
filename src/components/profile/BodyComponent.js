@@ -15,7 +15,6 @@ export default class BodyComponent extends PureComponent {
 	};
 
 	handleMouseHoverEye = e => {
-		console.log(e.target);
 		this.setState({ eyeMessage: true });
 	};
 
