@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { Image, Reveal } from "semantic-ui-react";
-import body from "../../people.svg";
-import reveal from "../../reveal.svg";
+import body from "../../people1.svg";
+import reveal from "../../reveal1.svg";
 
 export default class BodyComponent extends PureComponent {
 	state = {
