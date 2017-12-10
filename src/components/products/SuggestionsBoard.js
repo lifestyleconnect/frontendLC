@@ -11,10 +11,17 @@ export default class SuggestionsBoard extends PureComponent {
 					display: "flex",
 					flexDirection: "column",
 					justifyContent: "center",
-					alignItems: "center"
+					alignItems: "center",
+					width: "100%"
 				}}>
 				<NavbarComponent />
-				<PinCardComponent product={this.props.pins[0]} />
+				{this.props.pins
+					? <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
+							{this.props.pins.map((pin, index) =>
+								<PinCardComponent product={this.props.pins[index]} key={index} />
+							)}
+						</div>
+					: null}
 			</div>
 		);
 	}

@@ -3,7 +3,7 @@ import { Dropdown, Image, Menu, Input } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 export default class NavbarComponent extends PureComponent {
-	state = { activeItem: "home" };
+	state = { activeItem: "discover" };
 
 	handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
@@ -11,8 +11,8 @@ export default class NavbarComponent extends PureComponent {
 		const { activeItem } = this.state;
 		return (
 			<Menu secondary style={{ width: "100%" }}>
-				<Menu.Item>
-					<Image as={Link} to="/" src="/LOGOFINAL.png" alt="" size="mini" />
+				<Menu.Item as={Link} to="/">
+					<Image src="/LOGOFINAL.png" alt="" size="mini" />SnapShop
 				</Menu.Item>
 				<Menu.Item
 					as={Link}

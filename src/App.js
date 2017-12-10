@@ -30,7 +30,8 @@ class App extends Component {
 						path="/feed"
 						render={() => {
 							return (
-								<ProfilePage
+								<SuggestionsBoard
+									pins={this.state.pins}
 									user={{ name: "Julie", gender: "Female", age: 23, eyeColor: "green" }}
 								/>
 							);
