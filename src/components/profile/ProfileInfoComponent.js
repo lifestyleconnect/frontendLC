@@ -39,10 +39,13 @@ export default class ProfileInfoComponent extends PureComponent {
 						display: "flex",
 						justifyContent: "center",
 						alignItems: "center",
-						fontSize: "20px"
+						fontSize: "25px",
+						fontFamily: "Courier New, Courier, monospace",
+						lineHeight: "30px",
+						padding: "10px"
 					}}>
-					Welcome to SnapShop, {this.props.info.name}. To begin click on the figure below and select
-					the phenotype that interests you.
+					Welcome to your personal genome, {this.props.info.name}! To begin click on the figure
+					below and select the phenotype that interests you.
 				</div>
 			</div>
 		);
