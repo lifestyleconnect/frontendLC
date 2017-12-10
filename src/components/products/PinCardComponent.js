@@ -16,22 +16,35 @@ export default class PinCardComponent extends PureComponent {
 		if (this.state.starred) {
 			c = "pink";
 		} else c = "";
-		var starcount = 2048;
+		var starcount = 40;
 		if (this.state.starred) {
-			starcount = 2049;
+			starcount = 41;
 		}
 		return (
 			<Card color={c}>
-				<Image src={this.props.product.img_url} />
+				<div
+					style={{
+						display: "flex",
+
+						justifyContent: "center",
+						alignItems: "center"
+					}}>
+					<Image size="small" src={this.props.product.image_url} />
+					<Image size="small" src={this.props.product.experience_url} />
+				</div>
 				<Card.Content>
-					<Card.Header>{this.props.product.title}</Card.Header>
+					<Card.Header>
+						{this.props.product.title}
+					</Card.Header>
 					<Card.Meta>
 						Tagged as:
 						<a href="#">#green eyes</a>
 						<a href="#">#dark hair</a>
 						{/* Add parsing for tags property here */}
 					</Card.Meta>
-					<Card.Description>{this.props.product.description}</Card.Description>
+					<Card.Description>
+						{this.props.product.description}
+					</Card.Description>
 				</Card.Content>
 				<Card.Content extra>
 					<div
@@ -57,7 +70,7 @@ export default class PinCardComponent extends PureComponent {
 
 						<Button
 							icon="comments"
-							label={{ as: "a", basic: true, content: "572" }}
+							label={{ as: "a", basic: true, content: "7" }}
 							labelPosition="right"
 						/>
 					</div>

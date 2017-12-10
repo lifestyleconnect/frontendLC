@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import ProfilePage from "./components/profile/ProfilePage";
-import PinCardComponent from "./components/profile/PinCardComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import getPins from "./requests/getPins";
+import SuggestionsBoard from "./components/products/SuggestionsBoard";
 
 class App extends Component {
+	state = {};
+	componentWillMount = async () => {
+		let pins = await getPins();
+		this.setState({ pins });
+	};
 	render() {
 		return (
 			<Router>
@@ -25,6 +31,18 @@ class App extends Component {
 						render={() => {
 							return (
 								<ProfilePage
+									user={{ name: "Julie", gender: "Female", age: 23, eyeColor: "green" }}
+								/>
+							);
+						}}
+					/>
+					<Route
+						exact
+						path="/feed/eye-color"
+						render={() => {
+							return (
+								<SuggestionsBoard
+									pins={this.state.pins}
 									user={{ name: "Julie", gender: "Female", age: 23, eyeColor: "green" }}
 								/>
 							);
