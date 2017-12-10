@@ -12,14 +12,22 @@ class App extends Component {
 						exact
 						path="/"
 						render={() => {
-							return <ProfilePage user={{ name: "Julie", gender: "Female", age: 23 }} />;
+							return (
+								<ProfilePage
+									user={{ name: "Julie", gender: "Female", age: 23, eyeColor: "green" }}
+								/>
+							);
 						}}
 					/>
 					<Route
 						exact
 						path="/feed"
 						render={() => {
-							return <ProfilePage user={{ name: "Julie", gender: "Female", age: 23 }} />;
+							return (
+								<ProfilePage
+									user={{ name: "Julie", gender: "Female", age: 23, eyeColor: "green" }}
+								/>
+							);
 						}}
 					/>
 				</div>

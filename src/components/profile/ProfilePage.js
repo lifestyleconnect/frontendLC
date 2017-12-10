@@ -15,7 +15,7 @@ export default class ProfilePage extends PureComponent {
 				}}>
 				<NavbarComponent />
 				<ProfileInfoComponent info={this.props.user} />
-				<BodyComponent />
+				<BodyComponent info={this.props.user} />
 			</div>
 		);
 	}
