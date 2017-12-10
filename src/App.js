@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProfilePage from "./components/profile/ProfilePage";
+import PinCardComponent from "./components/profile/PinCardComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
