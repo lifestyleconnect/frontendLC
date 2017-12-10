@@ -10,7 +10,9 @@ export default class ProfileInfoComponent extends PureComponent {
 				style={{
 					display: "flex",
 					borderBottom: "solid black 10px",
-					borderTop: "solid black 10px"
+					borderTop: "solid black 10px",
+					width: "100%",
+					marginTop: "-10px"
 				}}>
 				<div>
 					<Image

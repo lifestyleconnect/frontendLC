@@ -1,29 +1,46 @@
 import React, { PureComponent } from "react";
 import { Image, Reveal } from "semantic-ui-react";
-import body from "../../people.svg";
-import reveal from "../../reveal.svg";
+import body from "../../people1.svg";
+import reveal from "../../reveal1.svg";
 
 export default class BodyComponent extends PureComponent {
-	// <div id="nav_menu">
-	//           <ul>
-	//               <li id="l1">AAAAA</li>
-	//               <li>BBBBB</li>
-	//               <li>CCCCC</li>
-	//               <li>DDDDD</li>
-	//           </ul>
-	//  </div>
+	state = {
+		visible: false
+	};
 
+	handleClick = () => {
+		this.setState({ visible: !this.state.visible });
+	};
 	render() {
 		return (
-			<Reveal animated="fade" instant>
-				<Reveal.Content visible>
-					<Image src={body} size="medium" />
-				</Reveal.Content>
-				<Reveal.Content hidden>
-					<Image src={reveal} size="medium" />
-					{/* $('#nav_menu').slideDown(); */}
-				</Reveal.Content>
-			</Reveal>
+			<div
+				style={{
+					display: "flex",
+					flexFlow: "row",
+					width: "100%",
+					height: "100%",
+					justifyContent: "center",
+					marginTop: "15px"
+				}}>
+				<div style={{ display: "flex", flexFlow: "row" }}>
+					{this.state.visible
+						? <div style={{ visibility: "visible" }}>content</div>
+						: <div style={{ visibility: "hidden" }}>content</div>}
+					<div>
+						<Reveal animated="fade" instant onClick={this.handleClick}>
+							<Reveal.Content visible>
+								<Image src={body} size="medium" />
+							</Reveal.Content>
+							<Reveal.Content hidden>
+								<Image src={reveal} size="medium" />
+							</Reveal.Content>
+						</Reveal>
+					</div>
+					{this.state.visible
+						? <div style={{ visibility: "visible" }}>content</div>
+						: <div style={{ visibility: "hidden" }}>content</div>}
+				</div>
+			</div>
 		);
 	}
 }
