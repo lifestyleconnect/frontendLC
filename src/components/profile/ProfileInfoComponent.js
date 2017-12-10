@@ -12,14 +12,16 @@ export default class ProfileInfoComponent extends PureComponent {
 					borderBottom: "solid black 10px",
 					borderTop: "solid black 10px",
 					width: "100%",
-					marginTop: "-10px"
+					marginTop: "-10px",
+					backgroundColor: "black",
+					color: "white"
 				}}>
 				<div>
 					<Image
 						circular
 						size="large"
 						style={{ padding: "10px", height: "180px", width: "220px" }}
-						src="https://news.nationalgeographic.com/content/dam/news/photos/000/755/75552.ngsversion.1422285553360.adapt.1900.1.jpg"
+						src="https://i.pinimg.com/736x/5e/ef/b0/5eefb0ba496d7eb426493260fbd63fc0--girl-models-pretty-face.jpg"
 					/>
 					<div
 						style={{
@@ -38,7 +40,8 @@ export default class ProfileInfoComponent extends PureComponent {
 						justifyContent: "center",
 						alignItems: "center"
 					}}>
-					{this.props.info.name} is a {this.props.info.age} year old {this.props.info.gender}.
+					Welcome to SnapShop, {this.props.info.name}. To begin click on the figure below and select
+					the phenotype that interests you.
 				</div>
 			</div>
 		);
